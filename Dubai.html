@@ -6,12 +6,6 @@
     <title>Dubai</title>
     <link rel="stylesheet" href="css/style.css">
     </head>
-    <style>
-        .slide{
-            display: none;
-        }
-    
-    </style>
 <div class="header-div">
     <header class="header">
         <a href="index.html">Jet Set Journey</a>
@@ -182,10 +176,14 @@
             }
         
         </script> -->
-    <h1>Current Weather in Dubai</h1>
+    <!-- <h1>Current Weather in Dubai</h1>
     <p>Temperature: <span id="temperature"></span>°C</p>
-    <p>Description: <span id="description"></span></p>
-
+    <p>Description: <span id="description"></span></p> -->
+    <div class="weather-widget">
+        <h1 class="location">Current Weather in Dubai</h1>
+        <p>Temperature: <span class="temperature" id="temperature"></span>°C</p>
+        <p>Description: <span class="condition" id="description"></span></p>
+    </div>
     <script>
         // Replace 'YOUR_API_KEY' with your actual API key from OpenWeatherMap
         const apiKey = '9ad9b6b617e0deefc5d7e07e3dcb3641';

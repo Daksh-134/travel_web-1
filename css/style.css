@@ -119,7 +119,7 @@ padding-right: 20px;
     height: 2300px;
     width: 1200px;
     margin: 0 auto;
-    background: #fff;
+    background: rgb(145, 211, 145);
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -368,3 +368,27 @@ select#Destination:hover {
   .book-now-button:hover {
     background-color: #1c7c99;
   }
+
+  .weather-widget {
+    background-image: url('https://images.ctfassets.net/hrltx12pl8hq/6TIZLa1AKeBel0yVO7ReIn/1fc0e2fd9fcc6d66b3cc733aa2547e11/weather-images.jpg?fit=fill&w=600&h=400');
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+border-radius: 10%; /* Set border-radius to 50% for a circular shape */
+padding: 10px;
+width: 300px;
+text-align: center;
+margin: 0 auto;
+}   
+.location {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 36px;
+}
+
+.condition {
+    font-size: 16px;
+    color: #555;
+}
