@@ -3,9 +3,9 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection parameters (Replace with your own)
     $db_host = "localhost";
-    $db_user = "admin";
-    $db_pass = "admin";
-    $db_name = "travel";
+    $db_user = "root";
+    $db_pass = "";
+    $db_name = "final_db";
 
     // Create a database connection
     $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);

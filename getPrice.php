@@ -1,9 +1,9 @@
 <?php
 // Connect to your database (modify these settings as needed)
 $host = "localhost";
-$username = "admin";
-$password = "admin";
-$database = "travel";
+$username = "root";
+$password = "";
+$database = "final_db";
 
 
 

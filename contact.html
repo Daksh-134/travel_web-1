@@ -2,90 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Contact-us</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Contact-us</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<div class="header-div">
-  <header class="header">
-      <a href="index.html">Jet Set Journey</a>
-      <a href="index.html"><img src="img/logo.jpg" ></a><hr style="width:80%">
-   </header>
-    <center><nav class="menu">
-        
-      <a href="index.html">HOME</a>
-      <a href="lgin.html">LOG IN</a>
-      <a href="destinations.html">DESTINATIONS</a>
-      <a href="traveltips.html">TRAVEL TIPS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav></center>
-  
-  </div>
-  
-  
-
-      
-
-
 <body>
-    <div class="form-container">
-
-        <h2>Interested in working with us?</h2>
-        <p>I'd love to hear from our readers – so no matter what you want to chat to us about; whether it be some travel advice, some feedback on the site, or simply some random banter feel free to contact us using the form below.</p>
-        <hr>
-        <div class="form">
-            <form method="post" action="http://localhost/TRAVEL_WEB/process_query.php" onsubmit="showMessage()">
-                <label for="Name">Name</label><br>
-                <input type="text" name="name" required><br>
-                <label for="Email">Email</label><br>
-                <input type="email" name="email" required><br>
-                <label for="Subject">Subject</label><br>
-                <input type="text" name="subject"><br>
-                <label for="Message">Message</label><br>
-                <textarea placeholder="Message" name="message" rows="10" cols="30" style="margin: 0px; width: 503px; height: 179px; background-color: lightgrey;font-size: 16px;border-radius: 10px;" required></textarea>
-                <button type="submit" name="submit">Submit</button>
-            </form>
-            <p id="submitMessage" style="color: green;"></p> <!-- Display message here -->
-        </div>
-        <br>
-        <hr>
-        <img src="img/c.jpg" style="height: 548px;width: 1000px;padding: -1px 10px 10px 10px">
+  <div class="form-container">
+    <h2>Interested in working with us?</h2>
+    <p>I'd love to hear from our readers – so no matter what you want to chat to us about; whether it be some travel
+      advice, some feedback on the site or simply some random banter feel free to contact us using the form below.</p>
+    <hr>
+    <div class="form">
+      <form id="queryForm">
+        <label for="Name">Name</label><br>
+        <input type="text" name="name" required><br>
+        <label for="Email">Email</label><br>
+        <input type="email" name="email" required><br>
+        <label for="Subject">Subject</label><br>
+        <input type="text" name="subject"><br>
+        <label for="Message">Message</label><br>
+        <textarea placeholder="Message" name="message" rows="10" cols="30"
+          style="margin: 0px; width: 503px; height: 179px; background-color: lightgrey; font-size: 16px; border-radius: 10px;"
+          required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="queryResult"></div> <!-- This div will display the query result -->
     </div>
+    <hr>
+    <img src="img/c.jpg" style="height: 548px; width: 1000px; padding: -1px 10px 10px 10px">
+  </div>
 
-    
-      <h2>Interested in working with us?</h2>       
-      <p>I'd love to hear from our readers – so no matter what you want to chat to us about; whether it be some travel advice, some feedback on the site or simply some random banter feel free to contact us using the form below.</p>     
-       <hr>
-       <div class="form">
-    
-       <form  method="post" action="http://localhost/TRAVEL_WEB/process_query.php"  >
-       
-       <label for="Name">Name</label><br>
-       <input type="text" name="name" required><br>
-          <label for="Email">Email</label><br>
-       <input type="email"  name="email" required><br>
-       <label for="Subject">Subject</label><br>
-       <input type="text" name="subject"><br>
-          <label for="Message">Message</label><br>
-         <textarea placeholder="Message" name="message"  rows="10" cols="30" style="margin: 0px; width: 503px; height: 179px; background-color: lightgrey;font-size: 16px;border-radius: 10px;" required>   </textarea>
-       <button type="submit" name="submit">Submit</button> 
-           
-           
-           
-       </form>   </div><br>
-       <hr>
-       <img src="img/c.jpg" style="height: 548px;width: 1000px;padding: -1px 10px 10px 10px">
-       </div>    
-        
-        
+  <!-- Add the following script for AJAX -->
 
+  <!-- Add the following script for AJAX -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#queryForm").submit(function (e) {
+        e.preventDefault();
 
-    <script>
-        function showMessage() {
-            document.getElementById('submitMessage').innerHTML = 'Submitting data...';
-        }
-    </script>
+        // Get form data
+        var formData = $(this).serialize();
+        // Include a parameter named 'submit'
+        formData += '&submit=submit';
+
+        // Send AJAX request
+        $.ajax({
+          type: "POST",
+          url: "http://localhost/TRAVEL_WEB/process_query.php",
+          data: formData,
+          dataType: "json", // Update dataType to JSON
+          success: function (response) {
+            // Display query result below the submit button
+            $("#queryResult").text(response.message);
+          },
+          error: function (xhr, status, error) {
+            // Handle AJAX errors
+            console.error(xhr.responseText);
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 
 </html>
