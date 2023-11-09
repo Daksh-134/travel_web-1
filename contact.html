@@ -7,6 +7,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+<div class="header-div">
+  <header class="header">
+    <a href="index.html"><img src="img/logo.jpg" height="100px" width="2000px" class="logo"></a>
+    <hr style="width:80%">
+    <a href="index.html">Jet Set Journey</a>
+  </header>
+  <center>
+    <nav class="menu">
+
+      <a href="index.html">HOME</a>
+      <a href="lgin.html">LOG IN</a>
+      <a href="destinations.html">DESTINATIONS</a>
+      <a href="traveltips.html">TRAVEL TIPS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </center>
+
+</div>
+
+
 <body>
   <div class="form-container">
     <h2>Interested in working with us?</h2>
@@ -50,7 +70,7 @@
         // Send AJAX request
         $.ajax({
           type: "POST",
-          url: "http://localhost/TRAVEL_WEB/process_query.php",
+          url: "http://localhost/php_try/process_query.php",
           data: formData,
           dataType: "json", // Update dataType to JSON
           success: function (response) {

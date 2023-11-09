@@ -1,78 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-    <meta charset="UTF-8">
-    <title>Jet Set GO</title>
-    <link rel="stylesheet" href="css/style.css">
-    </head>
-    <style>
-        .slide{
-            display: none;
-        }
-    
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <title>Jet Set GO</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+  .slide {
+    display: none;
+  }
+</style>
 <div class="header-div">
-    <header class="header">
-        <a href="index.html">Jet Set GO</a>
-        <a href="index.html"><img src="img/logo.jpg" ></a><hr style="width:80%">
-     </header>
-      <center><nav class="menu">
-          
-        <a href="index.html">HOME</a>
-        <a href="lgin.html">LOGIN</a>
-        <a href="destinations.html">DESTINATIONS</a>
-        <a href="traveltips.html">TRAVEL TIPS</a>
-        <a href="contact.html">CONTACT</a>
-      </nav></center>
-    
-    </div>
-    
-    
-    <body>
-    <div class="travel1-container">
+  <header class="header">
+    <a href="index.html">Jet Set GO</a>
+    <a href="index.html"><img src="img/logo.jpg"></a>
+    <hr style="width:80%">
+  </header>
+  <center>
+    <nav class="menu">
+
+      <a href="index.html">HOME</a>
+      <a href="lgin.html">LOGIN</a>
+      <a href="destinations.html">DESTINATIONS</a>
+      <a href="traveltips.html">TRAVEL TIPS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </center>
+
+</div>
+
+
+<body>
+  <div class="travel1-container">
     <div class="booking">
-    <h2 style="padding-left: 479px">Book your tickets now!</h2>
-   
-
-        
-        <div class="form">
-  
-        <form  action="http://localhost/TRAVEL_WEB/getPrice.php" method="post">
+      <h2 style="padding-left: 479px">Book your tickets now!</h2>
 
 
-        <label for="User id" >User id</label><br>
-        <input type="text" name="id"><br>
-            <label for="No.of Adults" >No.of Adults</label>
-            <input  type="text" id=adults name="adults" min=1    oninput="totalPrice()">
-              <label for="No.of Children" >No.of Children(*below 10 yrs)</label>
-            <input  type="text" id=child name="child"   min=0 oninput="totalPrice()">   
-            <label for="Date of Journey" >Date of Journey</label>   
-            <input type="date" id="date" name="date">
-            <label for="Destination">Destination</label>
-            <br>
-            <select id="Destination" name="Destination">
-                <option value="Italy">Italy</option>
-                <option value="Dubai">Dubai</option>
-                <option value="Australia">Australia</option>
-                 <option value="Bali">Bali</option>
-            </select>
-      <br>
-      <input id="check" type="checkbox" style="height:10px width 10px" name="check" >I accept to the terms and conditions<br><br>
-        <button type="submit" id="submit">Confirm</button> 
-            
-    
+
+      <div class="form">
+
+        <form action="http://localhost/php_try/getPrice.php" method="post">
+
+
+          <label for="User id">User id</label><br>
+          <input type="text" name="id"><br>
+          <label for="No.of Adults">No.of Adults</label>
+          <input type="text" id=adults name="adults" min=1 oninput="totalPrice()">
+          <label for="No.of Children">No.of Children(*below 10 yrs)</label>
+          <input type="text" id=child name="child" min=0 oninput="totalPrice()">
+          <label for="Date of Journey">Date of Journey</label>
+          <input type="date" id="date" name="date">
+          <label for="Destination">Destination</label>
+          <br>
+          <select id="Destination" name="Destination">
+            <option value="Italy">Italy</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Australia">Australia</option>
+            <option value="Bali">Bali</option>
+          </select>
+          <br>
+          <input id="check" type="checkbox" style="height:10px width 10px" name="check">I accept to the terms and
+          conditions<br><br>
+          <button type="submit" id="submit">Confirm</button>
+
+
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-

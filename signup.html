@@ -1,22 +1,19 @@
-<<<<<<< HEAD <!DOCTYPE html>
-    =======
-    <!-- <!DOCTYPE html>
->>>>>>> fc78dd5eb6c9ec88c49745b8f9c7de92661f7e27
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
     <link rel="stylesheet" href="css/log.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="ajax_signup.js"></script>
 </head>
+
 <body>
     <div class="signup-container">
         <h2>Sign Up</h2>
-
-        <form action="http://localhost/TRAVEL_WEB/process_signup.php" method="POST">
-
-        <form action="http://localhost/TRAVEL_WEB-MAIN/process_signup.php" method="POST">
-
+        <form id="signupForm" action="http://localhost/php_try/process_signup.php" method="POST">
             <div class="input-group">
                 <label for="username">Userid:</label>
                 <input type="text" id="username" name="username" required>
@@ -26,7 +23,7 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            
+
             <div class="input-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -37,68 +34,20 @@
                 <input type="text" id="firstname" name="firstname" required>
             </div>
 
-
             <div class="input-group">
-                <label for="lastname">lastname:</label>
+                <label for="lastname">Last Name:</label>
                 <input type="text" id="lastname" name="lastname" required>
             </div>
 
+            <button type="submit" onclick="submitForm()">Sign Up</button>
 
-
-            <button type="submit">Sign Up</button>
         </form>
+
+        <!-- Display success or failure message here -->
+        <div id="resultContainer"></div>
+
         <p>Already have an account? <a href="lgin.html">Login</a></p>
-   
- </div>
+    </div>
 </body>
-</html> -->
-    <!DOCTYPE html>
-    <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign Up Page</title>
-        <link rel="stylesheet" href="css/log.css">
-    </head>
-
-    <body>
-        <div class="signup-container">
-            <h2>Sign Up</h2>
-            <form action="http://localhost/TRAVEL_WEB/process_signup.php" method="POST">
-                <div class="input-group">
-                    <label for="username">Userid:</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" required>
-                </div>
-
-
-                <div class="input-group">
-                    <label for="lastname">lastname:</label>
-                    <input type="text" id="lastname" name="lastname" required>
-                </div>
-
-
-
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>Already have an account? <a href="lgin.html">Login</a></p>
-
-        </div>
-    </body>
-
-    </html>
+</html>
