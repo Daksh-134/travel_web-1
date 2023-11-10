@@ -13,10 +13,15 @@
     
     </style>
 <div class="header-div">
-    <header class="header">
+    <!-- <header class="header">
         <a href="index.html">Jet Set Journey</a>
         <a href="index.html"><img src="img/logo.jpg" ></a><hr style="width:80%">
-     </header>
+     </header> -->
+     <header class="header">
+        <a href="index.html"><img src="img/logo.jpg" height="100px" width="2000px" class="logo"></a>
+        <hr style="width:80%">
+          <a href="index.html">Jet Set Journey</a>
+       </header>
       <center><nav class="menu">
           
         <a href="index.html">HOME</a>
@@ -168,9 +173,11 @@
             }
         
         </script> -->
-        <h1>Current Weather in Australia</h1>
-        <p>Temperature: <span id="temperature"></span>°C</p>
-        <p>Description: <span id="description"></span></p>
+        <div class="weather-widget">
+            <h1 class="location">Current Weather in Australia</h1>
+            <p>Temperature: <span class="temperature" id="temperature"></span>°C</p>
+            <p>Description: <span class="condition" id="description"></span></p>
+        </div>
     
         <script>
             // Replace 'YOUR_API_KEY' with your actual API key from OpenWeatherMap
